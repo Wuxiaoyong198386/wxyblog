@@ -1,0 +1,39 @@
+<header id="header" class="header">
+        <div class="container-inner">
+            <div class="yusi-logo">
+                <a href="/"><h1><span class="yusi-mono">学无止镜</span><span class="yusi-bloger">吴孝永的个人博客</span></h1></a>
+            </div>
+        </div>
+        <div id="nav-header" class="navbar">
+            <ul class="nav">
+                {% for nav in navs %}
+                <li id="menu-item-{{nav.0.id}}" class="menu-item menu-item-object-category {% if nav.1 %}menu-item-has-children{% endif %} menu-item-{{nav.0.id}}"><a href="{{nav.0.url}}">{{nav.0.name}}</a>
+
+                {% if nav.1 %}
+                    <ul class="sub-menu">
+                    {% for s in nav.1 %}
+                        <li id="menu-item-{{s.id}}" class="menu-item menu-item-object-category menu-item-{{s.id}}"><a href="{{s.url}}">{{s.name}}</a></li>
+                    {% endfor %}
+                        
+                    </ul>
+                {% endif %}
+                </li>
+                {% endfor %}
+                <li style="float:right;">
+                    <div class="toggle-search"><i class="fa fa-search"></i></div>
+                    <div class="search-expand" style="display: none;">
+                        <div class="search-expand-inner">
+                            <form method="get" class="searchform themeform" onsubmit="location.href=&#39;?s=&#39; + encodeURIComponent(this.s.value).replace(/%20/g, &#39;+&#39;); return false;" action="/">
+                                <div>
+                                    <input type="ext" class="search" name="s" onblur="if(this.value==&#39;&#39;)this.value=&#39;search...&#39;;" onfocus="if(this.value==&#39;search...&#39;)this.value=&#39;&#39;;" value="search...">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="screen-mini">
+                <button data-type="screen-nav" class="btn btn-inverse screen-nav"><i class="fa fa-list"></i></button>
+            </div>
+        </div>
+    </header>

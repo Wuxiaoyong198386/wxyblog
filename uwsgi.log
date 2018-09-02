@@ -1,0 +1,221 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Jun  4 13:07:49 2018] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1) on 22 May 2018 12:53:10
+os: Darwin-17.3.0 Darwin Kernel Version 17.3.0: Thu Nov  9 18:09:22 PST 2017; root:xnu-4570.31.3~1/RELEASE_X86_64
+nodename: wuxiaoyongdeMacBook-Pro.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/wuxiaoyong/wwwroot/mydjango
+writing pidfile to /Users/wuxiaoyong/wwwroot/mydjango/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /Users/wuxiaoyong/wwwroot/mydjango
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 256
+building mime-types dictionary from file /etc/apache2/mime.types...1002 entry found
+lock engine: OSX spinlocks
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (127.0.0.1:8000).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Jun  4 13:09:10 2018] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1) on 22 May 2018 12:53:10
+os: Darwin-17.3.0 Darwin Kernel Version 17.3.0: Thu Nov  9 18:09:22 PST 2017; root:xnu-4570.31.3~1/RELEASE_X86_64
+nodename: wuxiaoyongdeMacBook-Pro.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/wuxiaoyong/wwwroot/mydjango
+writing pidfile to /Users/wuxiaoyong/wwwroot/mydjango/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /Users/wuxiaoyong/wwwroot/mydjango
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 256
+building mime-types dictionary from file /etc/apache2/mime.types...1002 entry found
+lock engine: OSX spinlocks
+thunder lock: enabled
+uWSGI http bound on 127.0.0.1:8001 fd 3
+uwsgi socket 0 bound to UNIX address /Users/wuxiaoyong/wwwroot/mydjango/uwsgi.sock fd 6
+Python version: 2.7.15 (default, May  1 2018, 16:44:08)  [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1)]
+Python main interpreter initialized at 0x7f8af041e660
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486480 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+added /usr/local/lib/python2.7/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f8af041e660 pid: 56418 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 56418)
+spawned uWSGI worker 1 (pid: 56419, cores: 1)
+spawned uWSGI worker 2 (pid: 56420, cores: 1)
+spawned uWSGI worker 3 (pid: 56421, cores: 1)
+spawned uWSGI worker 4 (pid: 56422, cores: 1)
+spawned uWSGI worker 5 (pid: 56423, cores: 1)
+Python auto-reloader enabled
+spawned uWSGI http 1 (pid: 56424)
+Building prefix dict from the default dictionary ...
+Loading model from cache /var/folders/lk/lzsz4xtj3lvfz22xytj7yfmw0000gn/T/jieba.cache
+Loading model cost 0.442 seconds.
+Prefix dict has been built succesfully.
+select id,title,thumb,pub from myblog_blog where id in(select bt.blog_id from myblog_blog_tag as bt left join myblog_tag as t on bt.tag_id=t.id where t.name in('php','安装','教程'))
+[pid: 56419|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 739 bytes} [Mon Jun  4 13:09:20 2018] GET / => generated 27569 bytes in 896 msecs (HTTP/1.1 200) 3 headers in 111 bytes (4 switches on core 0)
+[pid: 56422|app: -1|req: -1/3] 127.0.0.1 () {40 vars in 700 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/crayon.min.css => generated 20172 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (2 switches on core 0)
+[pid: 56419|app: -1|req: -1/3] 127.0.0.1 () {40 vars in 692 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/github.css => generated 2850 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56419|app: -1|req: -1/5] 127.0.0.1 () {40 vars in 698 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/page-list.css => generated 702 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 0)
+[pid: 56422|app: -1|req: -1/5] 127.0.0.1 () {40 vars in 692 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/monaco.css => generated 529 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 0)
+[pid: 56419|app: -1|req: -1/6] 127.0.0.1 () {40 vars in 698 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/latex.min.css => generated 3061 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56419|app: -1|req: -1/7] 127.0.0.1 () {40 vars in 692 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/public.css => generated 2356 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 56422|app: -1|req: -1/8] 127.0.0.1 () {40 vars in 690 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/style.css => generated 100176 bytes in 9 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (12 switches on core 0)
+[pid: 56422|app: -1|req: -1/9] 127.0.0.1 () {40 vars in 669 bytes} [Mon Jun  4 13:09:21 2018] GET /static/js/main.js => generated 1977 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56419|app: -1|req: -1/10] 127.0.0.1 () {40 vars in 681 bytes} [Mon Jun  4 13:09:21 2018] GET /static/js/jquery.min.js => generated 93637 bytes in 8 msecs via sendfile() (HTTP/1.1 200) 3 headers in 126 bytes (12 switches on core 0)
+[pid: 56422|app: -1|req: -1/11] 127.0.0.1 () {40 vars in 673 bytes} [Mon Jun  4 13:09:21 2018] GET /static/js/jquery.js => generated 46059 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 126 bytes (5 switches on core 0)
+[pid: 56422|app: -1|req: -1/12] 127.0.0.1 () {40 vars in 687 bytes} [Mon Jun  4 13:09:21 2018] GET /static/js/jquery.cookie.js => generated 3121 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56419|app: 0|req: 2/13] 127.0.0.1 () {40 vars in 711 bytes} [Mon Jun  4 13:09:21 2018] GET /media/img/django.png => generated 94 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 56419|app: 0|req: 3/14] 127.0.0.1 () {40 vars in 725 bytes} [Mon Jun  4 13:09:21 2018] GET /media/img/%E4%B8%8B%E8%BD%BD.webp => generated 95 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 4/15] 127.0.0.1 () {40 vars in 717 bytes} [Mon Jun  4 13:09:21 2018] GET /media/img/timthumb.jpeg => generated 97 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 5/16] 127.0.0.1 () {40 vars in 707 bytes} [Mon Jun  4 13:09:21 2018] GET /media/img/001.jpeg => generated 92 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 6/17] 127.0.0.1 () {40 vars in 755 bytes} [Mon Jun  4 13:09:21 2018] GET /media/img/u41656178372048994076fm27gp0.jpg => generated 116 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: -1|req: -1/18] 127.0.0.1 () {42 vars in 786 bytes} [Mon Jun  4 13:09:21 2018] GET /static/fonts/fontawesome-webfont.woff?v=4.1.0 => generated 98024 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (12 switches on core 0)
+[pid: 56419|app: -1|req: -1/19] 127.0.0.1 () {40 vars in 727 bytes} [Mon Jun  4 13:09:21 2018] GET /static/images/add_weixin.png => generated 388299 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (46 switches on core 0)
+[pid: 56419|app: -1|req: -1/20] 127.0.0.1 () {40 vars in 698 bytes} [Mon Jun  4 13:09:21 2018] GET /static/css/print.min.css => generated 1976 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56422|app: 0|req: 1/21] 127.0.0.1 () {40 vars in 767 bytes} [Mon Jun  4 13:09:21 2018] GET /media/img/u41656178372048994076fm27gp0_thumb.jpg => generated 122 bytes in 153 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 7/22] 127.0.0.1 () {40 vars in 693 bytes} [Mon Jun  4 13:09:21 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 8/23] 127.0.0.1 () {42 vars in 764 bytes} [Mon Jun  4 13:09:31 2018] GET /view/7 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 4 headers in 142 bytes (1 switches on core 0)
+select id,title,thumb,pub from myblog_blog where id in(select bt.blog_id from myblog_blog_tag as bt left join myblog_tag as t on bt.tag_id=t.id where t.name in('php','安装','教程'))
+[pid: 56419|app: 0|req: 9/24] 127.0.0.1 () {42 vars in 766 bytes} [Mon Jun  4 13:09:31 2018] GET /view/7/ => generated 24539 bytes in 215 msecs (HTTP/1.1 200) 6 headers in 363 bytes (4 switches on core 0)
+[pid: 56419|app: -1|req: -1/25] 127.0.0.1 () {42 vars in 857 bytes} [Mon Jun  4 13:09:31 2018] GET /static/images/default_avatar_male_50.gif => generated 693 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 10/26] 127.0.0.1 () {42 vars in 823 bytes} [Mon Jun  4 13:09:31 2018] GET /media/img/timthumb.jpeg => generated 97 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 56419|app: 0|req: 11/27] 127.0.0.1 () {42 vars in 861 bytes} [Mon Jun  4 13:09:31 2018] GET /media/img/u41656178372048994076fm27gp0.jpg => generated 116 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 12/28] 127.0.0.1 () {42 vars in 831 bytes} [Mon Jun  4 13:09:31 2018] GET /media/img/%E4%B8%8B%E8%BD%BD.webp => generated 95 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 1/29] 127.0.0.1 () {42 vars in 873 bytes} [Mon Jun  4 13:09:31 2018] GET /media/img/u41656178372048994076fm27gp0_thumb.jpg => generated 122 bytes in 147 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56419|app: 0|req: 13/30] 127.0.0.1 () {42 vars in 817 bytes} [Mon Jun  4 13:09:46 2018] GET /admin => generated 0 bytes in 0 msecs (HTTP/1.1 301) 4 headers in 141 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 14/31] 127.0.0.1 () {42 vars in 819 bytes} [Mon Jun  4 13:09:46 2018] GET /admin/ => generated 0 bytes in 24 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 56420|app: 0|req: 1/32] 127.0.0.1 () {42 vars in 856 bytes} [Mon Jun  4 13:09:46 2018] GET /admin/login/?next=/admin/ => generated 4403 bytes in 246 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 15/33] 127.0.0.1 () {42 vars in 850 bytes} [Mon Jun  4 13:09:47 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 16/34] 127.0.0.1 () {42 vars in 834 bytes} [Mon Jun  4 13:09:47 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 2/35] 127.0.0.1 () {42 vars in 829 bytes} [Mon Jun  4 13:09:47 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 17/36] 127.0.0.1 () {42 vars in 831 bytes} [Mon Jun  4 13:09:47 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56420|app: 0|req: 2/37] 127.0.0.1 () {42 vars in 845 bytes} [Mon Jun  4 13:09:47 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 3/38] 127.0.0.1 () {42 vars in 831 bytes} [Mon Jun  4 13:09:47 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 18/39] 127.0.0.1 () {52 vars in 1115 bytes} [Mon Jun  4 13:10:04 2018] POST /admin/login/?next=/admin/ => generated 0 bytes in 72 msecs (HTTP/1.1 302) 9 headers in 531 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 4/40] 127.0.0.1 () {46 vars in 963 bytes} [Mon Jun  4 13:10:04 2018] GET /admin/ => generated 20378 bytes in 135 msecs (HTTP/1.1 200) 6 headers in 228 bytes (4 switches on core 0)
+[pid: 56419|app: -1|req: -1/41] 127.0.0.1 () {42 vars in 859 bytes} [Mon Jun  4 13:10:04 2018] GET /static/admin/css/dashboard.css => generated 412 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 19/42] 127.0.0.1 () {42 vars in 870 bytes} [Mon Jun  4 13:10:04 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 5/43] 127.0.0.1 () {42 vars in 875 bytes} [Mon Jun  4 13:10:04 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 20/45] 127.0.0.1 () {42 vars in 859 bytes} [Mon Jun  4 13:10:04 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 6/45] 127.0.0.1 () {42 vars in 854 bytes} [Mon Jun  4 13:10:04 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 21/46] 127.0.0.1 () {42 vars in 856 bytes} [Mon Jun  4 13:10:04 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 7/47] 127.0.0.1 () {42 vars in 854 bytes} [Mon Jun  4 13:10:04 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 22/48] 127.0.0.1 () {42 vars in 870 bytes} [Mon Jun  4 13:10:04 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 8/49] 127.0.0.1 () {42 vars in 856 bytes} [Mon Jun  4 13:10:04 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 23/50] 127.0.0.1 () {44 vars in 894 bytes} [Mon Jun  4 13:10:09 2018] GET /admin/ => generated 20378 bytes in 88 msecs (HTTP/1.1 200) 6 headers in 228 bytes (4 switches on core 0)
+[pid: 56423|app: 0|req: 9/51] 127.0.0.1 () {42 vars in 875 bytes} [Mon Jun  4 13:10:09 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56423|app: 0|req: 10/52] 127.0.0.1 () {42 vars in 859 bytes} [Mon Jun  4 13:10:09 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56419|app: 0|req: 24/53] 127.0.0.1 () {42 vars in 854 bytes} [Mon Jun  4 13:10:09 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56419|app: 0|req: 25/55] 127.0.0.1 () {42 vars in 856 bytes} [Mon Jun  4 13:10:09 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 11/55] 127.0.0.1 () {42 vars in 870 bytes} [Mon Jun  4 13:10:09 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 26/56] 127.0.0.1 () {44 vars in 937 bytes} [Mon Jun  4 13:10:19 2018] GET /admin/myblog/blog/ => generated 17503 bytes in 75 msecs (HTTP/1.1 200) 7 headers in 382 bytes (4 switches on core 0)
+[pid: 56423|app: -1|req: -1/57] 127.0.0.1 () {42 vars in 875 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/css/changelists.css => generated 6170 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 12/58] 127.0.0.1 () {42 vars in 866 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 13/59] 127.0.0.1 () {42 vars in 882 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 14/60] 127.0.0.1 () {42 vars in 868 bytes} [Mon Jun  4 13:10:19 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 15/61] 127.0.0.1 () {42 vars in 887 bytes} [Mon Jun  4 13:10:19 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 16/62] 127.0.0.1 () {42 vars in 871 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: -1|req: -1/63] 127.0.0.1 () {42 vars in 842 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/core.js => generated 7976 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (1 switches on core 0)
+[pid: 56423|app: -1|req: -1/64] 127.0.0.1 () {42 vars in 882 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/vendor/jquery/jquery.min.js => generated 85659 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 3 headers in 126 bytes (11 switches on core 0)
+[pid: 56423|app: -1|req: -1/65] 127.0.0.1 () {42 vars in 856 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/jquery.init.js => generated 363 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 124 bytes (0 switches on core 0)
+[pid: 56423|app: -1|req: -1/66] 127.0.0.1 () {42 vars in 886 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 6591 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56423|app: -1|req: -1/67] 127.0.0.1 () {42 vars in 856 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/actions.min.js => generated 3162 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56423|app: -1|req: -1/68] 127.0.0.1 () {42 vars in 846 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/urlify.js => generated 8186 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56423|app: -1|req: -1/69] 127.0.0.1 () {42 vars in 864 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/prepopulate.min.js => generated 372 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 124 bytes (0 switches on core 0)
+[pid: 56423|app: -1|req: -1/70] 127.0.0.1 () {42 vars in 886 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/vendor/xregexp/xregexp.min.js => generated 62474 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 126 bytes (6 switches on core 0)
+[pid: 56423|app: -1|req: -1/71] 127.0.0.1 () {42 vars in 890 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/img/icon-yes.svg => generated 436 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 0)
+[pid: 56419|app: 0|req: 27/72] 127.0.0.1 () {42 vars in 822 bytes} [Mon Jun  4 13:10:19 2018] GET /admin/jsi18n/ => generated 7758 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 115 bytes (2 switches on core 0)
+[pid: 56423|app: 0|req: 17/73] 127.0.0.1 () {42 vars in 871 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 28/74] 127.0.0.1 () {42 vars in 887 bytes} [Mon Jun  4 13:10:19 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 18/75] 127.0.0.1 () {42 vars in 866 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 29/76] 127.0.0.1 () {42 vars in 882 bytes} [Mon Jun  4 13:10:19 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 19/77] 127.0.0.1 () {42 vars in 868 bytes} [Mon Jun  4 13:10:19 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 30/78] 127.0.0.1 () {44 vars in 967 bytes} [Mon Jun  4 13:10:25 2018] GET /admin/myblog/blog/7/change/ => generated 29521 bytes in 88 msecs (HTTP/1.1 200) 7 headers in 382 bytes (5 switches on core 0)
+[pid: 56423|app: -1|req: -1/79] 127.0.0.1 () {42 vars in 872 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/css/forms.css => generated 8173 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 56419|app: -1|req: -1/80] 127.0.0.1 () {42 vars in 869 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor-init.js => generated 2039 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56419|app: 0|req: 31/81] 127.0.0.1 () {42 vars in 896 bytes} [Mon Jun  4 13:10:25 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56419|app: 0|req: 32/82] 127.0.0.1 () {42 vars in 880 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 33/83] 127.0.0.1 () {42 vars in 875 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 34/84] 127.0.0.1 () {42 vars in 891 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: 0|req: 35/85] 127.0.0.1 () {42 vars in 877 bytes} [Mon Jun  4 13:10:25 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56419|app: -1|req: -1/86] 127.0.0.1 () {42 vars in 876 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/css/widgets.css => generated 10340 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 56420|app: 0|req: 3/87] 127.0.0.1 () {42 vars in 875 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56423|app: -1|req: -1/88] 127.0.0.1 () {42 vars in 877 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/ckeditor.js => generated 626453 bytes in 22 msecs via sendfile() (HTTP/1.1 200) 3 headers in 127 bytes (78 switches on core 0)
+[pid: 56420|app: 0|req: 4/89] 127.0.0.1 () {42 vars in 891 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: -1|req: -1/90] 127.0.0.1 () {42 vars in 913 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/img/icon-changelink.svg => generated 380 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (1 switches on core 0)
+[pid: 56420|app: 0|req: 5/91] 127.0.0.1 () {42 vars in 877 bytes} [Mon Jun  4 13:10:25 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: -1|req: -1/92] 127.0.0.1 () {42 vars in 907 bytes} [Mon Jun  4 13:10:25 2018] GET /static/admin/img/icon-addlink.svg => generated 331 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 0)
+[pid: 56419|app: 0|req: 36/93] 127.0.0.1 () {42 vars in 831 bytes} [Mon Jun  4 13:10:25 2018] GET /admin/jsi18n/ => generated 7758 bytes in 31 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 56420|app: -1|req: -1/94] 127.0.0.1 () {42 vars in 886 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/config.js?t=HBDG => generated 1321 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (1 switches on core 0)
+[pid: 56420|app: -1|req: -1/95] 127.0.0.1 () {42 vars in 937 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=HBDG => generated 48440 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (5 switches on core 0)
+[pid: 56420|app: -1|req: -1/96] 127.0.0.1 () {42 vars in 894 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/lang/zh-cn.js?t=HBDG => generated 11504 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 56419|app: -1|req: -1/97] 127.0.0.1 () {42 vars in 886 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/styles.js?t=HBDG => generated 5597 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56419|app: -1|req: -1/98] 127.0.0.1 () {42 vars in 926 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/codesnippet/plugin.js?t=HBDG => generated 3913 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (1 switches on core 0)
+[pid: 56419|app: -1|req: -1/99] 127.0.0.1 () {42 vars in 914 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/prism/plugin.js?t=HBDG => generated 4203 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 125 bytes (0 switches on core 0)
+[pid: 56423|app: -1|req: -1/101] 127.0.0.1 () {42 vars in 934 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css => generated 419 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 0)
+[pid: 56419|app: -1|req: -1/101] 127.0.0.1 () {42 vars in 950 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css => generated 381 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 56423|app: -1|req: -1/102] 127.0.0.1 () {42 vars in 966 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css => generated 1082 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56423|app: -1|req: -1/104] 127.0.0.1 () {42 vars in 934 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/codesnippet/lang/zh-cn.js?t=HBDG => generated 385 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 124 bytes (0 switches on core 0)
+[pid: 56419|app: -1|req: -1/104] 127.0.0.1 () {42 vars in 942 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css => generated 1306 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56420|app: -1|req: -1/105] 127.0.0.1 () {42 vars in 943 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js => generated 99483 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 126 bytes (10 switches on core 0)
+[pid: 56420|app: -1|req: -1/106] 127.0.0.1 () {42 vars in 907 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/contents.css?t=HBDG => generated 2989 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56420|app: -1|req: -1/107] 127.0.0.1 () {42 vars in 960 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.css => generated 2062 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56420|app: -1|req: -1/108] 127.0.0.1 () {42 vars in 1000 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/skins/moono-lisa/icons_hidpi.png?t=HBDG => generated 31549 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (2 switches on core 0)
+[pid: 56423|app: -1|req: -1/109] 127.0.0.1 () {42 vars in 955 bytes} [Mon Jun  4 13:10:25 2018] GET /static/ckeditor/ckeditor/plugins/widget/images/handle.png => generated 220 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 56423|app: 0|req: 20/110] 127.0.0.1 () {44 vars in 962 bytes} [Mon Jun  4 13:12:11 2018] GET /media/img/django.png => generated 94 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 56423|app: 0|req: 21/111] 127.0.0.1 () {44 vars in 907 bytes} [Mon Jun  4 13:19:18 2018] GET /view/6 => generated 0 bytes in 0 msecs (HTTP/1.1 301) 4 headers in 142 bytes (1 switches on core 0)
+Building prefix dict from the default dictionary ...
+Loading model from cache /var/folders/lk/lzsz4xtj3lvfz22xytj7yfmw0000gn/T/jieba.cache
+Loading model cost 0.448 seconds.
+Prefix dict has been built succesfully.
+select id,title,thumb,pub from myblog_blog where id in(select bt.blog_id from myblog_blog_tag as bt left join myblog_tag as t on bt.tag_id=t.id where t.name in('php','安装','教程'))
+[pid: 56423|app: 0|req: 22/112] 127.0.0.1 () {44 vars in 909 bytes} [Mon Jun  4 13:19:18 2018] GET /view/6/ => generated 24175 bytes in 686 msecs (HTTP/1.1 200) 6 headers in 363 bytes (3 switches on core 0)
+[pid: 56423|app: 0|req: 23/113] 127.0.0.1 () {42 vars in 877 bytes} [Mon Jun  4 13:19:19 2018] GET /media/img/timthumb.jpeg => generated 97 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 56423|app: 0|req: 24/114] 127.0.0.1 () {42 vars in 915 bytes} [Mon Jun  4 13:19:19 2018] GET /media/img/u41656178372048994076fm27gp0.jpg => generated 116 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 25/115] 127.0.0.1 () {42 vars in 885 bytes} [Mon Jun  4 13:19:19 2018] GET /media/img/%E4%B8%8B%E8%BD%BD.webp => generated 95 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 1/116] 127.0.0.1 () {42 vars in 871 bytes} [Mon Jun  4 13:19:19 2018] GET /media/img/django.png => generated 94 bytes in 144 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+select id,title,thumb,pub from myblog_blog where id in(select bt.blog_id from myblog_blog_tag as bt left join myblog_tag as t on bt.tag_id=t.id where t.name in('php','安装','教程'))
+[pid: 56423|app: 0|req: 26/117] 127.0.0.1 () {44 vars in 919 bytes} [Mon Jun  4 13:20:06 2018] GET /view/6/ => generated 24175 bytes in 199 msecs (HTTP/1.1 200) 6 headers in 363 bytes (3 switches on core 0)
+[pid: 56421|app: 0|req: 2/118] 127.0.0.1 () {42 vars in 871 bytes} [Mon Jun  4 13:20:06 2018] GET /media/img/django.png => generated 94 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 27/119] 127.0.0.1 () {42 vars in 877 bytes} [Mon Jun  4 13:20:06 2018] GET /media/img/timthumb.jpeg => generated 97 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 3/120] 127.0.0.1 () {42 vars in 915 bytes} [Mon Jun  4 13:20:06 2018] GET /media/img/u41656178372048994076fm27gp0.jpg => generated 116 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 28/121] 127.0.0.1 () {42 vars in 885 bytes} [Mon Jun  4 13:20:06 2018] GET /media/img/%E4%B8%8B%E8%BD%BD.webp => generated 95 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 4/122] 127.0.0.1 () {42 vars in 877 bytes} [Mon Jun  4 13:20:06 2018] GET /media/img/timthumb.jpeg => generated 97 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 5/123] 127.0.0.1 () {42 vars in 873 bytes} [Mon Jun  4 13:20:36 2018] GET /admin/ => generated 20378 bytes in 125 msecs (HTTP/1.1 200) 6 headers in 228 bytes (3 switches on core 0)
+[pid: 56421|app: 0|req: 6/124] 127.0.0.1 () {42 vars in 885 bytes} [Mon Jun  4 13:20:36 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56421|app: 0|req: 7/125] 127.0.0.1 () {42 vars in 869 bytes} [Mon Jun  4 13:20:36 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 8/126] 127.0.0.1 () {42 vars in 866 bytes} [Mon Jun  4 13:20:36 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 9/127] 127.0.0.1 () {42 vars in 864 bytes} [Mon Jun  4 13:20:36 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 10/128] 127.0.0.1 () {42 vars in 880 bytes} [Mon Jun  4 13:20:36 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 11/129] 127.0.0.1 () {42 vars in 866 bytes} [Mon Jun  4 13:20:36 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 12/130] 127.0.0.1 () {44 vars in 947 bytes} [Mon Jun  4 13:20:40 2018] GET /admin/myblog/blog/ => generated 17503 bytes in 91 msecs (HTTP/1.1 200) 7 headers in 382 bytes (3 switches on core 0)
+[pid: 56421|app: 0|req: 13/131] 127.0.0.1 () {42 vars in 897 bytes} [Mon Jun  4 13:20:41 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 14/132] 127.0.0.1 () {42 vars in 881 bytes} [Mon Jun  4 13:20:41 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56421|app: 0|req: 15/133] 127.0.0.1 () {42 vars in 876 bytes} [Mon Jun  4 13:20:41 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (2 switches on core 0)
+[pid: 56421|app: 0|req: 16/134] 127.0.0.1 () {42 vars in 892 bytes} [Mon Jun  4 13:20:41 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 17/135] 127.0.0.1 () {42 vars in 878 bytes} [Mon Jun  4 13:20:41 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 29/136] 127.0.0.1 () {42 vars in 832 bytes} [Mon Jun  4 13:20:41 2018] GET /admin/jsi18n/ => generated 7758 bytes in 34 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 18/137] 127.0.0.1 () {42 vars in 897 bytes} [Mon Jun  4 13:20:41 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 30/138] 127.0.0.1 () {42 vars in 881 bytes} [Mon Jun  4 13:20:41 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 19/139] 127.0.0.1 () {42 vars in 876 bytes} [Mon Jun  4 13:20:41 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 31/140] 127.0.0.1 () {42 vars in 892 bytes} [Mon Jun  4 13:20:41 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 20/141] 127.0.0.1 () {42 vars in 878 bytes} [Mon Jun  4 13:20:41 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 0 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 32/142] 127.0.0.1 () {44 vars in 977 bytes} [Mon Jun  4 13:20:43 2018] GET /admin/myblog/blog/6/change/ => generated 29179 bytes in 86 msecs (HTTP/1.1 200) 7 headers in 382 bytes (5 switches on core 0)
+[pid: 56421|app: 0|req: 21/143] 127.0.0.1 () {42 vars in 906 bytes} [Mon Jun  4 13:20:43 2018] GET /static/bootstrap/css/bootstrap.min.css => generated 112 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 33/144] 127.0.0.1 () {42 vars in 890 bytes} [Mon Jun  4 13:20:43 2018] GET /static/admin/css/overrides.css => generated 104 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 22/145] 127.0.0.1 () {42 vars in 885 bytes} [Mon Jun  4 13:20:43 2018] GET /static/admin/js/jquery-1.9.1.min.js => generated 109 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 34/146] 127.0.0.1 () {42 vars in 901 bytes} [Mon Jun  4 13:20:43 2018] GET /static/admin/js/jquery-migrate-1.2.1.min.js => generated 117 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56421|app: 0|req: 23/147] 127.0.0.1 () {42 vars in 887 bytes} [Mon Jun  4 13:20:43 2018] GET /static/bootstrap/js/bootstrap.min.js => generated 110 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 56423|app: 0|req: 35/148] 127.0.0.1 () {42 vars in 841 bytes} [Mon Jun  4 13:20:43 2018] GET /admin/jsi18n/ => generated 7758 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 115 bytes (2 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 22462)
+...brutally killing workers...
+...brutally killing workers...

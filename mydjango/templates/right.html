@@ -1,0 +1,73 @@
+<aside class="sidebar">
+            
+            <div class="widget widget_text">
+                <div class="textwidget">
+                    <div class="social">                        
+                        <a class="weixin" data-original-title="" title=""><i class="weixins fa fa-weixin"></i>
+                            <div class="weixin-popover">
+                                <div class="popover bottom in">
+                                    <div class="arrow"></div>
+                                    <div class="popover-title">微信号“学无止镜”</div>
+                                    <div class="popover-content"><img src="/static/images/add_weixin.png"></div>
+                                </div>
+                            </div></a>
+
+                        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2855669687@qq.com" rel="external nofollow" title="" target="_blank" data-original-title="Email"><i class="email fa fa-envelope-o"></i></a>
+                        <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2855669687" rel="external nofollow" title="" target="_blank" data-original-title="联系QQ"><i class="qq fa fa-qq"></i></a>
+                        <a href="/feed" rel="external nofollow" target="_blank" title="" data-original-title="订阅本站"><i class="rss fa fa-rss"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="widget widget_metaslider_widget">
+                <div class="title">
+                    <h2>热门专题</h2></div>
+                <!-- meta slider -->
+                <!--// meta slider-->
+                {% for h in ishot %}
+                <div style="width: 90%;margin-left: 19px;padding-bottom: 5px;"><a href="/view/{{h.id}}"><img src="/media/{{h.thumb}}" width="100%" height="100%">{{h.title}}</a></div>
+                {% endfor %}
+            </div>
+            
+            <div class="widget widget_archive">
+                <div class="title">
+                    <h2>文章归档</h2></div>
+                <ul>
+                {% for d in date_class %}
+                    <li><a href="/date/{{d.pub|date:'Y/m'}}">{{d.pub|date:"Y年m月"}}({{d.rows}})</a></li>
+                {% endfor %}
+                 
+                </ul>
+            </div>
+            
+            <div class="widget d_postlist">
+                <div class="title">
+                    <h2>猜你喜欢</h2></div>
+                <ul>
+                {% for l in youlike %}
+                    <li><a href="/view/{{l.id}}" title="{{l.title}}"><span class="thumbnail"><img src="/media/{{l.thumb}}" alt="{{l.title}}"></span><span class="text">{{l.title}}</span><span class="muted">{{l.pub|date:"Y年m月"}}</span><span class="muted">0评论</span></a></li>
+                {% endfor %}
+                </ul>
+            </div>
+
+            <div class="widget d_tag">
+                <div class="title">
+                    <h2>标签云</h2></div>
+                <div class="d_tags">
+                    {% for t in tagsyun %}
+                    <a title="" href="/tag/{{t.name}}" data-original-title="{{t.rows}}个话题">{{t.name}} ({{t.rows}})</a>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            <div class="widget widget_links">
+                <div class="title">
+                    <h2>友情链接</h2></div>
+                <ul class="xoxo blogroll">
+                    {% for f in friendlink %}
+                    <li><a href="{{f.url}}" target="_blank">{{f.name}}博客</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </aside>

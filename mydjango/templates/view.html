@@ -1,0 +1,244 @@
+{% load staticfiles %}  
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu-tc-verification" content="0fb041a64ee71333c957d8c784961cc8">
+    <meta property="qc:admins" content="145637425211673116375">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>{{blog.title}}------学无止镜丨吴孝永的个人博客</title>    
+    <meta name="description" content="{{blog.description}}">
+    <meta name="keywords" content="{{blog.keywords}},学无止镜,网络,IT,技术,博客,PHP">
+    <script>
+        window._deel = {name: '学无止镜',url: 'http://www.wxyblog.cn', ajaxpager: 'on', commenton: 0, roll: [0,0]}
+    </script>
+
+    <style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+    </style>
+    <link rel="stylesheet" id="crayon-css" href="{% static 'css/crayon.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="crayon-theme-github-css" href="{% static 'css/github.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="crayon-font-monaco-css" href="{% static 'css/monaco.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="page-list-style-css" href="{% static 'css/page-list.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="l2h_style-css" href="{% static 'css/latex.min.css' %}" type="text/css" media="screen, print">
+    <link rel="stylesheet" id="l2h_print_style-css" href="{% static 'css/print.min.css' %}" type="text/css" media="print">
+    <link rel="stylesheet" id="style-css" href="{% static 'css/style.css' %}" type="text/css" media="all">
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+
+    <style>
+    .latex_thm,
+    .latex_lem,
+    .latex_cor,
+    .latex_defn,
+    .latex_prop,
+    .latex_rem {
+        margin: 0;
+        padding: 5px;
+        background: lightcyan;
+        border: solid 3px green;
+        -moz-border-radius: 1.0em;
+        -webkit-border-radius: 7px;
+        box-shadow: 0 0 0 green;
+    }
+
+    .latex_em {
+        font-style: italic;
+    }
+
+    .bibtex_title {
+        font-weight: bold;
+        color: #004b33;
+    }
+
+    a.bibtex_title {
+        text-decoration: none;
+    }
+    </style>
+    <meta name="keywords" content="{{blog.keywords}}吴孝永,学无止镜,爬虫,Python,C,Java,PHP,HTML,JS,教程">
+    <meta name="description" content="{{blog.description}}">
+  
+    <!--[if lt IE 9]><script src="/static/js/html5.js"></script><![endif]-->
+    <meta name="360-site-verification" content="bdc579accc68a98f1258ebcce2266afa">
+
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <script type="text/javascript">
+    </script>
+    <style id="fit-vids-style">
+    .fluid-width-video-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 0;
+    }
+
+    .fluid-width-video-wrapper iframe,
+    .fluid-width-video-wrapper object,
+    .fluid-width-video-wrapper embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+   
+  
+    .thumb{
+        width: 200px;
+        height:123px;
+
+    }
+    #comment-smilies img{
+        width: 80px;
+        height: 80px;
+    }
+    .c-main img{
+        width: 60px;
+        height:60px;
+    }
+    </style>
+</head>
+
+<body class="home blog hPC">
+     {% include 'header.html' %}
+    <section class="container">
+        <div class="speedbar">
+            <div class="pull-right">
+                <i class="fa fa-user"></i>
+                <a href="">投稿</a>&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-power-off"></i> <a href="">登录</a>
+            </div>
+            <div class="toptip">
+                <strong class="text-success"><i class="fa fa-volume-up"></i> </strong> &nbsp; 如果想一起玩互联网技术，请加微信，希望大家支持，非常感谢！
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="content">
+
+            <div class="breadcrumbs">
+                <a title="返回首页" href="/"><i class="fa fa-home"></i></a> <small>&gt;</small> 
+
+                {% ifequal parent_category None%}
+                 <a href="/category/{{category.code}}">{{category.name}}</a> <small>&gt;</small> 
+                {%else%}
+                <a href="/category/{{parent_category.code}}">{{parent_category.name}}</a> <small>&gt;</small> 
+                <a href="/category/{{parent_category.code}}/{{category.code}}">{{category.name}}</a> <small>&gt;</small> 
+                {% endifequal %}
+
+                <span class="muted"><a href="/view/{{blog.id}}">{{blog.title}}</a></span>
+            </div>
+
+            <header class="article-header">
+            <h1 class="article-title"><a href="/view/{{blog.id}}" title="{{blog.title}}">{{blog.title}}</a></h1>
+            <div class="meta">
+                <span id="mute-category" class="muted"><i class="fa fa-list-alt"></i>
+                <a href="/category/{% ifequal parent_category None %}{{category.code}}{% else %}{{parent_category.code}}/{{category.code}}{% endifequal %}"> {{blog.category.name}}</a></span> <time class="muted"><i class="fa fa-clock-o"></i> {{blog.pub}}</time>
+                <span class="muted"><i class="fa fa-eye"></i> {{blog.click_count}}浏览</span>
+                <!--
+                <span class="muted"><i class="fa fa-comments-o"></i> <a href="/view/3/#comments">113评论</a></span>
+                -->
+            </div>
+            </header> 
+
+
+
+            <div class="banner banner-post">
+            </div>
+
+
+            <article class="article-content">
+            
+            {{blog.content|safe}}
+            <p></p>
+            <p>转载请注明：<a href="/" data-original-title="" title="学无止镜">学无止镜</a> » <a href="/view/{{blog.id}}" data-original-title="" title="{{blog.title}}">{{blog.title}}</a></p>
+      
+            <div class="article-social">
+                        <a href="javascript:;" data-action="ding" data-id="{{blog.id}}" id="Addlike" class="action" data-original-title="" title="">
+                            <i class="fa fa-heart-o"></i>喜欢 (<span class="count">{{blog.love_count}}</span>)</a><span class="or">or</span><span class="action action-share bdsharebuttonbox"><i class="fa fa-share-alt"></i>分享 (<span class="bds_count" data-cmd="count" title="累计分享0次">0</span>)<div class="action-popover"><div class="popover top in"><div class="arrow"></div><div class="popover-content"><a href="#" class="sinaweibo fa fa-weibo" data-cmd="tsina" title="" data-original-title="分享到新浪微博"></a><a href="#" class="bds_qzone fa fa-star" data-cmd="qzone" title="" data-original-title="分享到QQ空间"></a><a href="#" class="tencentweibo fa fa-tencent-weibo" data-cmd="tqq" title="" data-original-title="分享到腾讯微博"></a><a href="#" class="qq fa fa-qq" data-cmd="sqq" title="" data-original-title="分享到QQ好友"></a><a href="#" class="bds_renren fa fa-renren" data-cmd="renren" title="" data-original-title="分享到人人网"></a><a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="" data-original-title="分享到微信"></a><a href="#" class="bds_more fa fa-ellipsis-h" data-cmd="more" data-original-title="" title=""></a></div></div></div></span> 
+            </div>
+            </article>
+
+            <footer class="article-footer">
+            <div class="article-tags"><i class="fa fa-tags"></i>
+            {% for t in tags %}
+                <a href="/tag/{{t.name}}" rel="tag" data-original-title="" title="">{{t.name}}</a>
+            {% endfor %}
+               
+
+            </div>      
+            </footer>
+
+
+            {% if blog_tags_pic %}
+            <div class="related_posts">
+                <ul class="related_img">
+                    {% for p in blog_tags_pic %}
+                    <li class="related_box">
+                        <a href="/view/{{p.id}}" title="{{p.title}}" target="_blank">
+                         <img src="/media/{{p.thumb}}" alt="{{p.title}}" class="thumb">  <br><span class="r_title">{{p.title}}</span></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="relates">
+                    <ul>
+                    {% for t in blog_tags_text %}
+                    <li><i class="fa fa-minus"></i><a href="/view/{{t.id}}" title="{{t.title}}">{{t.title}}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+
+            </div>
+           {% endif %}
+            {% include 'comments.html' %}               
+            </div>
+        </div>
+        {% include 'right.html'%}
+    </section>
+
+
+
+    {% include 'footer.html'%}
+    <link rel="stylesheet" id="metaslider-public-css" href="{% static 'css/public.css' %}" type="text/css" media="all" property="stylesheet">
+    <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>     
+    <!-- xuanfu -->
+    <!-- Dynamic page generated in 0.878 seconds. -->
+    <!-- Cached page generated by WP-Super-Cache on 2018-01-27 17:37:09 -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.nav li').click(function(){
+               $.cookie("menu-item-id",$(this).attr("id"),{path:"/"});
+            });
+
+
+            id=$.cookie("menu-item-id");
+            if (id=='undefined'){
+                $("#menu-item-1").addClass('current-menu-item');
+            }
+            else
+            {
+                 $("#"+id).addClass('current-menu-item');
+            }
+            $("#author").val($.cookie('comment_author_85f55a86912ac53a68031168f9ea786a'))
+            $("#email").val($.cookie('comment_author_email_85f55a86912ac53a68031168f9ea786a'))
+            $("#url").val($.cookie('comment_author__url_85f55a86912ac53a68031168f9ea786a'))
+
+        });
+
+    </script>
+</body>
+
+</body>
+
+</html>

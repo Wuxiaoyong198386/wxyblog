@@ -1,0 +1,147 @@
+{% load staticfiles %}  
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu-tc-verification" content="0fb041a64ee71333c957d8c784961cc8">
+    <meta property="qc:admins" content="145637425211673116375">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>学无止镜丨吴孝永的个人博客</title>    
+    <meta name="description" content="吴孝永的个人网站，记录生活的瞬间，分享学习的心得，感悟生活，留住感动，静静寻觅生活的美好">
+    <meta name="keywords" content="吴孝永,学无止镜,网络,IT,技术,博客,PHP,python,linux,lnmp">
+    <link rel="stylesheet" id="crayon-css" href="{% static 'css/crayon.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="crayon-theme-github-css" href="{% static 'css/github.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="crayon-font-monaco-css" href="{% static 'css/monaco.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="page-list-style-css" href="{% static 'css/page-list.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="l2h_style-css" href="{% static 'css/latex.min.css' %}" type="text/css" media="screen, print">
+    <link rel="stylesheet" id="l2h_print_style-css" href="{% static 'css/print.min.css' %}" type="text/css" media="print">
+    <link rel="stylesheet" id="style-css" href="{% static 'css/style.css' %}" type="text/css" media="all">
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+
+    <script>
+        window._deel = {name: '学无止镜',url: 'http://www.wxyblog.cn', ajaxpager: 'on', commenton: 0, roll: [0,0]}
+    </script>
+
+    <meta name="keywords" content="吴孝永,学无止镜,爬虫,Python,C,Java,PHP,HTML,JS,教程">
+    <meta name="description" content="吴孝永的个人主页">
+  
+    <!--[if lt IE 9]><script src="{% static 'js/html5.js' %}"></script><![endif]-->
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <script type="text/javascript">
+    </script>
+    <style>   
+    .thumb{
+        width: 200px;
+        height:123px;
+    }
+    </style>
+</head>
+
+<body class="home blog hPC">
+    {% include 'header.html' %}
+    <section class="container">
+        <div class="speedbar">
+            <div class="pull-right">
+                <i class="fa fa-user"></i>
+                <!-- <a href="">投稿</a>&nbsp;&nbsp;&nbsp; -->
+                <!-- <i class="fa fa-power-off"></i> <a href="">登录</a> -->
+            </div>
+            <div class="toptip">
+                <strong class="text-success"><i class="fa fa-volume-up"></i> </strong> &nbsp; 如果想一起玩互联网技术，请加微信，希望大家支持，非常感谢！
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="content">
+                <div>
+                    <div class="left-ad" style="clear: both;background-color: #fff; width: 30%;float: left;margin-right:2%;"></div>
+                    <div class="hot-posts">
+                        <h2 class="title">热门排行</h2>
+                        <ul>
+                        {% for l in hot_list %}
+                            <li>
+                                <p><span class="muted"><a href="javascript:;" data-action="ding" data-id="{{l.id}}" id="Addlike" class="action"><i class="fa fa-heart-o"></i><span class="count">{{l.love_count}}</span> 喜欢</a>
+                                    </span>
+                                </p><span class="label label-{{forloop.counter}}">{{forloop.counter}}</span><a href="/view/{{l.id}}" title="{{l.title}}">{{l.title}}</a>
+                            </li>
+                         {% endfor %}  
+                        </ul>
+                    </div>
+                </div>
+
+                {% for blog in blogs %}
+                <article class="excerpt">
+                    <header><a class="label label-important" href="">{{blog.category.name}}<i class="label-arrow"></i></a>
+                        <h2><a target="_blank" href="/view/{{blog.id}}" title="{{blog.title}}">{{blog.title}}</a></h2>
+                    </header>
+                    <div class="focus"><a target="_blank" href="/view/{{blog.id}}"><img class="thumb" src="/media/{{blog.thumb}}" alt="{{blog.title}}"></a></div>
+                    <span class="note"> {{blog.description}}</span>
+                    <p class="auth-span">
+                        <!-- <span class="muted"><i class="fa fa-user"></i> <a href="">{{blog.author}}</a></span> -->
+                        <span class="muted"><i class="fa fa-clock-o"></i>{{blog.pub|date:"Y-m-d"}}</span> 
+                        <span class="muted"><i class="fa fa-eye"></i> {{blog.click_count}}浏览</span> 
+                        <span class="muted"><i class="fa fa-comments-o"></i> <a target="_blank" href="/view/{{blog.id}}#respond">0评论</a></span>                  
+                        <span class="muted">
+                        <a href="javascript:;" data-action="ding" data-id="{{blog.id}}" id="Addlike" class="action">
+                            <i class="fa fa-heart-o"></i>
+                            <span class="count">{{blog.love_count}}</span>喜欢
+                        </a>
+                        </span>
+                    </p>
+                </article>
+                {% empty %}
+                NO data
+
+                {% endfor %}
+
+               
+                <div class="pagination" style="display: none;">
+                    <ul>
+                        <li class="prev-page"></li>
+                        {% for i in allPage %}
+                            {% ifequal i curPage %}
+                            <li class="active"><span>{{curPage}}</span></li>
+                            {% else %}
+                            <li><a href="/page/?curPage={{i}}&allPage={{maxPage}}">1</a></li>
+                            {% endifequal %}
+                        {% endfor %}
+                            <li><span> ... </span></li>
+                            {% ifequal curPage maxPage %}
+
+                            {% else %}
+                            <li class="next-page"><a href="/page/?curPage={{curPage}}&allPage={{maxPage}}">下一页</a></li>
+                            {% endifequal %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% include 'right.html'%}
+    </section>
+    {% include 'footer.html'%}
+    <link rel="stylesheet" id="metaslider-public-css" href="{% static 'css/public.css' %}" type="text/css" media="all" property="stylesheet">
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+    <!-- xuanfu -->
+    <!-- Dynamic page generated in 0.878 seconds. -->
+    <!-- Cached page generated by WP-Super-Cache on 2018-01-27 17:37:09 -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.nav li').click(function(){
+               $.cookie("menu-item-id",$(this).attr("id"),{path:"/"});
+            });
+
+
+            id=$.cookie("menu-item-id");
+            if (id=='undefined'){
+                $("#menu-item-1").addClass('current-menu-item');
+            }
+            else
+            {
+                 $("#"+id).addClass('current-menu-item');
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

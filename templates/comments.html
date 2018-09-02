@@ -1,0 +1,87 @@
+<div id="respond" class="no_webshot">
+	<form action="/comments-post" method="post" id="commentform">
+		{% csrf_token %}
+		<div class="comt-title">
+			<div class="comt-avatar pull-left">
+				<img alt="" src="/static/images/default_avatar_male_50.gif" class="avatar avatar-54 photo avatar-default" height="54" width="54">			</div>
+			<div class="comt-author pull-left">
+			发表我的评论			</div>
+			<a id="cancel-comment-reply-link" class="pull-right" href="javascript:;" style="display: none;">取消评论</a>
+		</div>
+		
+		<div class="comt">
+			<div class="comt-box">
+				<textarea placeholder="写点什么..." class="input-block-level comt-area" name="comment" id="comment" cols="100%" rows="3" tabindex="1" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+				<div class="comt-ctrl">
+					<button class="btn btn-primary pull-right" type="submit" name="submit" id="submit" tabindex="5" value="" style="opacity: 1;"><i class="fa fa-check-square-o"></i> 提交评论</button>
+					<div class="comt-tips pull-right">
+						<input type="hidden" name="comment_post_ID" value="{{blog.id}}" id="comment_post_ID">
+						<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						
+
+					</div>
+					<span data-type="comment-insert-smilie" class="muted comt-smilie"><i class="fa fa-smile-o"></i> 表情</span>
+					<span class="muted comt-mailme">
+						<label for="comment_mail_notify" class="checkbox inline" style="padding-top:0">
+							<input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked">有人回复时邮件通知我
+						</label>
+					</span>
+				</div>
+				<!-- <div id="comment-smilies" class="hide" style="display: none;">
+					<img data-simle="silly" data-type="comment-smilie" src="/static/face/silly.png">
+					<img data-simle="yeah" data-type="comment-smilie" src="/static/face/yeah.png">
+					<img data-simle="what" data-type="comment-smilie" src="/static/face/what.png">
+					<img data-simle="good" data-type="comment-smilie" src="/static/face/good.png">
+					<img data-simle="goodluck" data-type="comment-smilie" src="/static/face/goodluck.png">
+					<img data-simle="Secretly" data-type="comment-smilie" src="/static/face/Secretly.png">
+					<img data-simle="silly" data-type="comment-smilie" src="/static/face/silly.png">
+					<img data-simle="cry" data-type="comment-smilie" src="/static/face/cry.png">
+					<img data-simle="byebye" data-type="comment-smilie" src="/static/face/byebye.png">
+					<img data-simle="perfect" data-type="comment-smilie" src="/static/face/perfect.png">
+					<img data-simle="loveyou" data-type="comment-smilie" src="/static/face/loveyou.png">
+					<img data-simle="yes" data-type="comment-smilie" src="/static/face/yes.png">
+					<img data-simle="disturb" data-type="comment-smilie" src="/static/face/disturb.png">
+					<img data-simle="thinks" data-type="comment-smilie" src="/static/face/thinks.png">
+					<img data-simle="HappyNewYear" data-type="comment-smilie" src="/static/face/HappyNewYear.png">
+					<img data-simle="Petrifaction" data-type="comment-smilie" src="/static/face/Petrifaction.png">
+					<img data-simle="HappyNewYear" data-type="comment-smilie" src="/static/face/HappyNewYear.png">
+					<img data-simle="gxfc" data-type="comment-smilie" src="/static/face/gxfc.png">
+					
+					
+				</div> -->
+			</div>
+			<!--- write cooke and check -->
+			<div class="comt-comterinfo" id="comment-author-info" style="display: none;">
+				<h4>Hi，您需要填写昵称和邮箱！</h4>
+				<ul>
+					<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" type="text" name="author" id="author" value="" tabindex="2" placeholder="昵称"><span class="help-inline">昵称 (必填)</span></li>
+					<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" type="text" name="email" id="email" value="" tabindex="3" placeholder="邮箱"><span class="help-inline">邮箱 (必填)</span></li>
+					<li class="form-inline"><label class="hide" for="url">网址</label><input class="ipt" type="text" name="url" id="url" value="" tabindex="4" placeholder="网址"><span class="help-inline">网址</span></li>
+				</ul>
+			</div>
+		</div>		
+	</form>
+</div>
+
+
+<!--5678-->
+<div id="postcomments">
+	<div id="comments">
+	
+		<i class="fa fa-comments-o"></i> <b> ({{commonslist_count}})</b>个小伙伴在吐槽
+	
+	</div>
+	<ol class="commentlist">		
+		{% autoescape off %}
+          {{commonslist}}
+		{% endautoescape %}
+		
+		
+	</ol>
+	<div class="commentnav">
+	
+	</div>
+</div>
+
+
+
